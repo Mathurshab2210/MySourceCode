@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Sequential Page Animations - Vandelay Demo</title>
+  <link rel="shortcut icon" href="http://www.vandelaydesign.com/wp-content/themes/vd/assets/graphics/favicon.png">
+  <link rel="icon" href="http://www.vandelaydesign.com/wp-content/themes/vd/assets/graphics/favicon.png">
+  <link rel="stylesheet" type="text/css" media="all" href="styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="animate.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+  
+  <div class="container">
+      
+  </div>
+  <div class="wrapper">
+    <div class="logotxt">
+      <h1>MySourceCode</h1>
+      <p class="sublogo" style="opacity:0;">Website where you can find source code to projects and simple programs</p>
+    </div>
+    
+    <div class="featured">
+      <p style="opacity:0;">Available languages:</p>
+      <ul class="logos">
+        <li class="fastco" style="opacity:0;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Python_icon_%28black_and_white%29.svg/2048px-Python_icon_%28black_and_white%29.svg.png" width="220" height="40" alt="fastco"></li>
+        <li class="mashable" style="opacity:0;"><img src="http://programmerspoint.in/images/c-programming-course.png" width="220" height="40" alt="mashable"></li>
+        <li class="cnet" style="opacity:0;"><img src="https://png.pngitem.com/pimgs/s/174-1746684_java-java-logo-black-png-transparent-png.png" width="93" height="40" alt="cnet"></li>
+        <li class="verge" style="opacity:0;"><img src="https://cutewallpaper.org/24/web-design-png/web-design-development-web-developer-logo-png-free-transparent-png-download-pngkey.png" width="257" height="40" alt="the verge"></li>
+ 
+      </ul>
+    </div>
+      <div class="python">
+      <a href="http://"> <h2>Python</h2>  </a>
+        <div id="pycontent"><p> Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general purpose language, meaning it can be used to create a variety of different programs and isn’t specialized for any specific problems. This versatility, along with its beginner-friendliness, has made it one of the most-used programming languages today. A survey conducted by industry analyst firm RedMonk found that it was the most popular programming language among developers in 2020</p></div>
+          <div id="pyimg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Python_icon_%28black_and_white%29.svg/2048px-Python_icon_%28black_and_white%29.svg.png" alt="python"></div>
+      </div>
+      <div class="java">
+      <a href="http://"> <h2>java</h2>  </a>
+      <div id="javaimg"><img src="https://png.pngitem.com/pimgs/s/174-1746684_java-java-logo-black-png-transparent-png.png" alt="python"></div>
+        <div id="javacontent"><p> Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general purpose language, meaning it can be used to create a variety of different programs and isn’t specialized for any specific problems. This versatility, along with its beginner-friendliness, has made it one of the most-used programming languages today. A survey conducted by industry analyst firm RedMonk found that it was the most popular programming language among developers in 2020</p></div>
+      </div>
+      <div class="c-programming">
+      <a href="http://"> <h2>C-programming</h2>  </a>
+        <div id="ccontent"><p> Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general purpose language, meaning it can be used to create a variety of different programs and isn’t specialized for any specific problems. This versatility, along with its beginner-friendliness, has made it one of the most-used programming languages today. A survey conducted by industry analyst firm RedMonk found that it was the most popular programming language among developers in 2020</p></div>
+          <div id="cimg"><img src="http://programmerspoint.in/images/c-programming-course.png" alt="python"></div>
+      </div>
+      <div class="web-design">
+      <a href="http://"> <h2>web-design</h2>  </a>
+        <div id="pycontent"><p> Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general purpose language, meaning it can be used to create a variety of different programs and isn’t specialized for any specific problems. This versatility, along with its beginner-friendliness, has made it one of the most-used programming languages today. A survey conducted by industry analyst firm RedMonk found that it was the most popular programming language among developers in 2020</p></div>
+          <div id="pyimg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Python_icon_%28black_and_white%29.svg/2048px-Python_icon_%28black_and_white%29.svg.png" alt="python"></div>
+      </div>
+    
+  </div>
+  
+<script type="text/javascript">
+   function toggleMobileMenu(menu) {
+    menu.classList.toggle('open');
+}
+$(function(){
+  $('.logotxt h1').addClass('animated fadeInUp');
+
+  setTimeout(function() { // animate logo tagline
+    $('.sublogo').show().addClass('animated fadeInUp');
+  }, 500);
+    
+  setTimeout(function(){ // animate "featured in" text
+    $('.featured p').show().addClass('animated fadeInUp');
+  }, 650);
+  
+  setTimeout(function(){ // chain logo animations
+    $('.fastco').show().addClass('animated fadeInDown');
+    
+    setTimeout(function(){  // animate mashable logo
+      $('.mashable').show().addClass('animated fadeInDown');
+    }, 200);
+    
+    setTimeout(function(){ // animate cnet logo
+      $('.cnet').show().addClass('animated fadeInDown');
+    }, 400);
+    
+    setTimeout(function(){ // animate verge logo
+      $('.verge').show().addClass('animated fadeInDown');
+    }, 500);
+    
+    setTimeout(function(){ // animate buzzfeed logo
+      $('.buzzfeed').show().addClass('animated fadeInDown');
+    }, 600);
+  }, 700);
+});
+</script>
+</body>
+</html>
